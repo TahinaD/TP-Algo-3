@@ -1,0 +1,43 @@
+digraph RedBlackTree {
+	graph [ranksep=0.5];
+	node [shape = record];
+
+	n1 [style=filled, fillcolor=grey, label="{1|{<left>|<right>}}"];
+	lnil1 [style=filled, fillcolor=grey, label="NIL"];
+	n1:left:c -> lnil1:n [headclip=false, tailclip=false]
+	rnil1 [style=filled, fillcolor=grey, label="NIL"];
+	n1:right:c -> rnil1:n [headclip=false, tailclip=false]
+	n2 [style=filled, fillcolor=grey, label="{2|{<left>|<right>}}"];
+	n2:left:c -> n1:n [headclip=false, tailclip=false]
+	n2:right:c -> n3:n [headclip=false, tailclip=false]
+	n3 [style=filled, fillcolor=grey, label="{3|{<left>|<right>}}"];
+	lnil3 [style=filled, fillcolor=grey, label="NIL"];
+	n3:left:c -> lnil3:n [headclip=false, tailclip=false]
+	rnil3 [style=filled, fillcolor=grey, label="NIL"];
+	n3:right:c -> rnil3:n [headclip=false, tailclip=false]
+	n4 [style=filled, fillcolor=grey, label="{4|{<left>|<right>}}"];
+	n4:left:c -> n2:n [headclip=false, tailclip=false]
+	n4:right:c -> n6:n [headclip=false, tailclip=false]
+	n5 [style=filled, fillcolor=grey, label="{5|{<left>|<right>}}"];
+	lnil5 [style=filled, fillcolor=grey, label="NIL"];
+	n5:left:c -> lnil5:n [headclip=false, tailclip=false]
+	rnil5 [style=filled, fillcolor=grey, label="NIL"];
+	n5:right:c -> rnil5:n [headclip=false, tailclip=false]
+	n6 [style=filled, fillcolor=grey, label="{6|{<left>|<right>}}"];
+	n6:left:c -> n5:n [headclip=false, tailclip=false]
+	n6:right:c -> n9:n [headclip=false, tailclip=false]
+	n7 [style=filled, fillcolor=grey, label="{7|{<left>|<right>}}"];
+	lnil7 [style=filled, fillcolor=grey, label="NIL"];
+	n7:left:c -> lnil7:n [headclip=false, tailclip=false]
+	rnil7 [style=filled, fillcolor=grey, label="NIL"];
+	n7:right:c -> rnil7:n [headclip=false, tailclip=false]
+	n9 [style=filled, fillcolor=red, label="{9|{<left>|<right>}}"];
+	n9:left:c -> n7:n [headclip=false, tailclip=false]
+	n9:right:c -> n10:n [headclip=false, tailclip=false]
+	n10 [style=filled, fillcolor=grey, label="{10|{<left>|<right>}}"];
+	lnil10 [style=filled, fillcolor=grey, label="NIL"];
+	n10:left:c -> lnil10:n [headclip=false, tailclip=false]
+	rnil10 [style=filled, fillcolor=grey, label="NIL"];
+	n10:right:c -> rnil10:n [headclip=false, tailclip=false]
+
+}
