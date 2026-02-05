@@ -1,0 +1,13 @@
+réponses aux éventuelles questions posées pour l’exercice dans le sujet,
+- une description synthétique des algorithmes mis en œuvre et une analyse de la complexité
+en temps et en espace de ces algorithmes,
+- synthèse de la démarche de programmation mise en œuvre, en précisant :
+	- références concernant les documentations et aides utilisées (livres, camarades,
+chat-GPT, site web ... ),
+
+- difficultés rencontrées et comment elles ont été résolues.
+Ne connaissant pas la fonction getline(), il m’a fallu rechercher sa documentation sur le site http://manpagesfr.free.fr/man/man3/getline.3.html .
+Le fichier à prendre en paramètre dans la fonction print_queue n’était pas spécifié explicitement.
+Problème de type de paramètre : computeExpression n’arrivait pas à prendre stringToTokenQueue, qui est poutant de type Queue*. → problèmre résolu en déclarant la fonction au-dessus.
+Probleme stringToTokenQueue(line) : des éléments qui n’étaient pas dans la chaine prise en paramètre s’affichaient car fin ne s’arretait pas si le caractère est \0.
+Problème libération mémoire : la mémoire allouée par la création des Tokens n'étaient pas libérée. A cause du const de top, il était impossible de free la tête de file. Thomas Saurel m'a aidé en me montrant que le fait de convertir le const Queue * en Token *, il était ensuite possible de libérer la mémoire du token.
